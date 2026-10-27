@@ -1,6 +1,6 @@
 ---
 name: how
-description: Explain how something works in the current codebase. Start with a breadth-first overview at the right level, then go deeper only when the user asks.
+description: Explain how something works in the current codebase. Use whenever the user asks a "how" question about the code or repo, e.g. "how does X work", "how is this structured", "how is this organized", "how does X talk to Y", "walk me through X", or "explain X". Use it even for questions that look simple. Start with a breadth-first overview at the right level, then go deeper only when the user asks.
 ---
 
 Help the user understand how something works in this codebase. Investigate the code first. Base every claim on code you have read, not on names or guesses.
