@@ -25,6 +25,7 @@ npx skills update -g
 | `implement` | My coding practices for writing and changing code. |
 | `nvim-agent-comments` | Reads and acts on comments left with the nvim-agent-comments Neovim plugin. |
 | `prove-it-works` | Verifies a change works before calling it done, and leaves a script you can run to check it yourself. |
+| `prove-it-works-on-screen` | Does `prove-it-works`, plus short before/after videos (or screenshots when a video adds nothing) shown inside Claude Code. |
 | `reflect` | Reviews the session and lists what could be automated with new skills. |
 | `reproduce-and-fix` | Reproduces a bug, fixes the root cause, and explains the fix visually. |
 | `side-effect` | Finds what a change would break, how users would notice, and gives a verdict on whether it is safe. |
