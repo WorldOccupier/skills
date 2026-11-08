@@ -19,6 +19,7 @@ npx skills update -g
 | Skill | What it does |
 | --- | --- |
 | `bro` | Restates the last message in plain language, with no jargon. |
+| `catchup` | Reads just the end of the last session's transcript to pick up where you left off, instead of compacting. |
 | `code-review` | Reviews changes against the `implement` practices and tries to break them. |
 | `explainer-video` | Makes a short motion-graphics explainer video in code with fframes. |
 | `how` | Explains how something in the codebase works, starting with an overview and going deeper on request. |
