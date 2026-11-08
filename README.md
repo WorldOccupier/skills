@@ -20,7 +20,6 @@ npx skills update -g
 | --- | --- |
 | `bro` | Restates the last message in plain language, with no jargon. |
 | `catchup` | Reads just the end of the last session's transcript to pick up where you left off, instead of compacting. |
-| `code-review` | Reviews changes against the `implement` practices and tries to break them. |
 | `explainer-video` | Makes a short motion-graphics explainer video in code with fframes. |
 | `how` | Explains how something in the codebase works, starting with an overview and going deeper on request. |
 | `implement` | My coding practices for writing and changing code. |
@@ -29,6 +28,7 @@ npx skills update -g
 | `prove-it-works-on-screen` | Does `prove-it-works`, plus short before/after videos (or screenshots when a video adds nothing) shown inside Claude Code. |
 | `reflect` | Reviews the session and lists what could be automated with new skills. |
 | `reproduce-and-fix` | Reproduces a bug, fixes the root cause, and explains the fix visually. |
+| `review-changes` | Reviews changes against the `implement` practices, checks them for breaking changes with `side-effect`, and tries to break them. |
 | `side-effect` | Finds what a change would break, how users would notice, and gives a verdict on whether it is safe. |
 | `unslop` | Cuts AI tells from writing. |
 | `visualize` | Explains the current topic with diagrams, code sketches, and focused diffs. |

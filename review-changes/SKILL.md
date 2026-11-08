@@ -1,6 +1,6 @@
 ---
-name: code-review
-description: Review code changes against the implement skill's practices and try to break them. Use whenever the user asks for a review, e.g. "review this", "review my changes", "review this PR", "check this diff", or "what's wrong with this code". Use it even for small diffs.
+name: review-changes
+description: Review code changes against the implement skill's practices, check them for breaking changes with the side-effect skill, and try to break them. Use whenever the user asks for a review, e.g. "review this", "review my changes", "review this PR", "check this diff", or "what's wrong with this code". Use it even for small diffs.
 ---
 
 Review only the changes. Don't comment on code the change didn't touch, unless the change breaks it.
@@ -18,11 +18,17 @@ Review only the changes. Don't comment on code the change didn't touch, unless t
 ## Try to break it
 
 - Look for inputs and states that make the change fail: empty, null, very large, malformed, or concurrent input, missing files, failed calls, and other edge cases.
-- Check that callers of changed code still work.
 - When you can, prove a break by running it, writing a failing test, or pointing at the exact path through the code. Mark a finding as unconfirmed if you can't prove it.
+
+## Check for breaking changes
+
+- Load the side-effect skill and run it on each changed function, class, field, config key, schema, endpoint, or file whose signature, behavior, or return value changed, or that was removed.
+- Skip changes nothing else can depend on, such as a new private helper or an edit inside a function body that keeps the same behavior.
+- Add every breaking, risky, or unintended place it finds to the findings, with its user-facing effect.
 
 ## Report
 
+- Open with the side-effect verdict for the whole change: safe, safe with fixes, or unsafe. Include its diagram when it found anything.
 - List findings from most to least severe. For each, give the file and line, what's wrong, how it breaks, and a suggested fix.
 - Don't pad the list. If you find nothing, say so.
 - Don't change any code unless the user asks.
